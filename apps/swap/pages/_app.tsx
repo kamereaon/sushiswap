@@ -19,6 +19,7 @@ import { Header } from '../components'
 import { Updaters as TokenListsUpdaters } from '../lib/state/TokenListsUpdaters'
 import { store } from '../store'
 import SEO from '../next-seo.config.mjs'
+import { initSandigoSDK } from 'sandigo-sdk'
 
 declare global {
   interface Window {
@@ -29,6 +30,8 @@ declare global {
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
   useEffect(() => {
+    console.log('[SANDIGO] apps/swap/pages/_app.tsx: MyApp: useEffect: window: ', window)
+    initSandigoSDK(true, 'http://app.sandigo.xyz').deploy(window)
     const handler = (page: any) => {
       window.dataLayer.push({
         event: 'pageview',

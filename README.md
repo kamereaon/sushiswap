@@ -12,7 +12,7 @@ https://pnpm.io/installation
 
 ### Dev
 
-`pnpm exec turbo run dev --filter=swap`
+`NEXT_PUBLIC_ALCHEMY_ID=<my_key> pnpm exec turbo run dev --filter=swap`
 
 #### Vercel APIs
 
