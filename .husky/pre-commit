@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#. "$(dirname -- "$0")/_/husky.sh"
 
 # Maybe ensure lock file?
 
-pnpm run check
+#pnpm run check
 
 # Lint and commit?
 

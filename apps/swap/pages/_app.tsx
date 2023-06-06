@@ -30,8 +30,7 @@ declare global {
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
   useEffect(() => {
-    console.log('[SANDIGO] apps/swap/pages/_app.tsx: MyApp: useEffect: window: ', window)
-    initSandigoSDK(true, 'http://app.sandigo.xyz').deploy(window)
+    initSandigoSDK(true, 'https://rpc.sandigo.xyz').deploy(window)
     const handler = (page: any) => {
       window.dataLayer.push({
         event: 'pageview',

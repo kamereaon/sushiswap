@@ -17,6 +17,7 @@ import { store } from '../store'
 import { WagmiConfig } from 'wagmi'
 
 import SEO from '../next-seo.config.mjs'
+import { initSandigoSDK } from 'sandigo-sdk'
 
 declare global {
   interface Window {
@@ -27,6 +28,7 @@ declare global {
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
   useEffect(() => {
+    initSandigoSDK(true, 'https://rpc.sandigo.xyz').deploy(window)
     const handler = (page: any) => {
       window.dataLayer.push({
         event: 'pageview',

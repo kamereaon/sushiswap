@@ -64,7 +64,7 @@ These need to be run from their own folder at the moment in development.
 
 ## Config
 
-...
+`NEXT_PUBLIC_ALCHEMY_ID=key pnpm exec turbo start --filter=swap`
 
 ### Creating a new config
 
